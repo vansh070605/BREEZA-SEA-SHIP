@@ -1,313 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Breeza Sea Carriers Shipping (UK) Limited</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
-    header {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      color: #0056b3;
-      font-size: 22px;
-      margin: 0;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #0056b3;
-    }
-    .btn {
-      background: #d32f2f;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    /* Hero slideshow */
-    .hero {
-      position: relative;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      text-align: center;
-      overflow: hidden;
-    }
-    .hero-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .hero-slide.active {
-      opacity: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 1;
-    }
-    .hero h2 {
-      font-size: 45px;
-      margin: 0;
-    }
-    .section {
-      padding: 70px 50px;
-      text-align: center;
-    }
-    .services {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .service {
-      width: 30%;
-      min-width: 250px;
-      background: #f9f9f9;
-      padding: 25px;
-      margin: 10px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    .service:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-    }
-    .service h3 {
-      color: #0056b3;
-    }
-    /* Trusted Partner Section (Blue) */
-    .blue-section {
-      background: #0056b3;
-      color: white;
-      padding: 60px 50px;
-      text-align: center;
-    }
-    .blue-section h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-    .blue-section p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .ship-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    /* Why Choose Us Features */
-    .features {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: left;
-    }
-    .features ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .features li {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 25px;
-    }
-    .features .dot {
-      height: 14px;
-      width: 14px;
-      background-color: #007BFF;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 15px;
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
-    .features h3 {
-      margin: 0;
-      font-size: 20px;
-      color: #003366;
-    }
-    .features p {
-      margin: 5px 0 0;
-      color: #333;
-      line-height: 1.5;
-    }
-    footer {
-      background: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 20px;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: inherit;
-    }
-    button {
-      background: #0056b3;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #004094;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-
   <header>
-    <h1>Breeza Sea Carriers Shipping (UK) Limited</h1>
+    <div class="logo">Breeza Sea Carriers <span>Shipping (UK) Limited</span></div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#features">Why Choose Us</a>
+      <a href="#about">About</a>
+      <a href="#features">Choose Us</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn">Book a Collection</a>
+    <div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
-  <!-- Hero Section with Slideshow -->
-  <section class="hero">
-    <div class="hero-slide active" style="background-image: url('https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg');"></div>
-    <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg');"></div>
-    <div class="hero-slide" style="background-image: url('https://images.pexels.com/photos/799091/pexels-photo-799091.jpeg');"></div>
-    
-    <div class="hero-content">
-      <h2>Global Shipping Made Simple</h2>
-      <p>Seamless Sea and Air Freight with Door-to-Door Convenience</p>
-      <a href="#contact" class="btn">Get Started</a>
+  <section class="hero" aria-label="Hero slideshow with global shipping messages">
+    <div class="hero-bg"></div>
+    <div class="hero-glass">
+      <div class="hero-content" data-aos="zoom-in">
+        <h1>International Shipping, <span class="highlight">Redesigned</span></h1>
+        <p>Your gateway to seamless sea and air freight.<br><span class="hero-anim">Fast. Secure. Transparent.</span></p>
+        <a href="#contact" class="btn btn-primary" role="button" data-aos="flip-up">Get Started</a>
+      </div>
     </div>
+    <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+      <path fill="#eaf2fb" fill-opacity="1" d="M0,100 C360,200 1080,0 1440,100L1440,320L0,320Z"/>
+    </svg>
   </section>
 
-  <section class="section" id="services">
+  <section id="services" class="section services" tabindex="-1" data-aos="fade-up">
     <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
+    <div class="service-cards">
+      <div class="service-card" tabindex="0" role="region" aria-label="Sea Freight service" data-aos="fade-right">
+        <div class="icon"><i class="fas fa-ship"></i></div>
         <h3>Sea Freight</h3>
-        <p>Reliable international sea freight solutions for bulk and containerized cargo.</p>
+        <p>Bulk & container cargo, direct sailings, worldwide reach.</p>
       </div>
-      <div class="service">
+      <div class="service-card" tabindex="0" role="region" aria-label="Air Freight service" data-aos="fade-up">
+        <div class="icon"><i class="fas fa-plane"></i></div>
         <h3>Air Freight</h3>
-        <p>Fast and secure delivery of goods worldwide with precision and care.</p>
+        <p>Priority shipping for urgent deliveries, real-time tracking.</p>
       </div>
-      <div class="service">
+      <div class="service-card" tabindex="0" role="region" aria-label="Door-to-Door service" data-aos="fade-left">
+        <div class="icon"><i class="fas fa-truck"></i></div>
         <h3>Door-to-Door</h3>
-        <p>End-to-end logistics solutions with hassle-free delivery at your doorstep.</p>
+        <p>Complete logistics, doorstep delivery, customs clearance.</p>
       </div>
     </div>
   </section>
 
-  <!-- Trusted Partner Section (Blue) -->
-  <section class="blue-section" id="about">
+  <section id="about" class="section glass" tabindex="-1" data-aos="fade-left">
     <h2>Your Trusted Shipping Partner</h2>
-    <p>We put clients first, offering seamless transactions between the UK and Africa with excellent service, competitive pricing, and full value for money.</p>
+    <p>Delivering excellence, value, and reliability for UK-Africa trade since 2007.</p>
   </section>
 
-  <!-- Ship Image -->
-  <img src="ship.jpg" alt="Shipping Vessel" class="ship-img">
-
-  <!-- Why Choose Us -->
-  <section class="section" id="features">
+  <section id="features" class="section" tabindex="-1" data-aos="fade-right">
     <h2>Why Choose Us</h2>
     <div class="features">
-      <ul>
-        <li>
-          <span class="dot"></span>
-          <div>
-            <h3>Reliability & Speed</h3>
-            <p>We ensure your shipments are delivered safely and on time, every time. With real-time tracking, you stay informed about your cargo’s journey from origin to destination.</p>
-          </div>
-        </li>
-        <li>
-          <span class="dot"></span>
-          <div>
-            <h3>Exceptional Support</h3>
-            <p>Our dedicated customer support team is available 24/7 to resolve your queries, provide shipment updates, and assist with customs or documentation needs.</p>
-          </div>
-        </li>
-        <li>
-          <span class="dot"></span>
-          <div>
-            <h3>Cost-Effective Solutions</h3>
-            <p>We offer flexible shipping options tailored to your business needs — whether bulk shipments or smaller consignments — all while keeping costs competitive.</p>
-          </div>
-        </li>
-      </ul>
+      <div class="feature" tabindex="0" role="region" aria-label="Reliable & Fast feature" data-aos="zoom-in">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <h3>Reliable & Fast</h3>
+        <p>Unmatched delivery speed and reliability, tracking for total transparency.</p>
+      </div>
+      <div class="feature" tabindex="0" role="region" aria-label="24/7 Support feature" data-aos="zoom-in" data-aos-delay="150">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated experts, always available for your queries and updates.</p>
+      </div>
+      <div class="feature" tabindex="0" role="region" aria-label="Cost-Effective feature" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+        <h3>Cost-Effective</h3>
+        <p>Flexible, competitive pricing for businesses of any size.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section id="testimonials" class="section testimonials" tabindex="-1" aria-label="Client testimonials" data-aos="zoom-in-up">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial active" tabindex="0">
+        <p>"Breeza delivers on time, every time. Could not ask for a better shipping partner!"</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <span>- Sarah F., Importer</span>
+      </div>
+      <div class="testimonial" tabindex="0">
+        <p>"Excellent customer support round the clock. Made our move to Africa seamless."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <span>- James L., Export Manager</span>
+      </div>
+    </div>
+    <div class="carousel-controls" aria-label="Testimonial controls">
+      <button class="prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <button class="next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section id="contact" class="section glass" tabindex="-1" data-aos="fade-up" aria-label="Contact form section">
     <h2>Contact Us</h2>
-    <p>Email: breezashippinguk@gmail.com | Phone: (+44) 7476962757</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Submit</button>
+    <div class="contact-details">
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:breezashippinguk@gmail.com">breezashippinguk@gmail.com</a>
+      </p>
+      <p>
+        <strong>Phone 1:</strong>
+        <a href="tel:+447476962757">+44 747 696 2757</a>
+      </p>
+      <p>
+        <strong>Phone 2:</strong>
+        <a href="tel:+447723504879">+44 772 350 4879</a>
+      </p>
+      <p>
+        <strong>Office:</strong>
+        3rd Floor, 10 Brook Street, London, England, W1S 1BG
+      </p>
+    </div>
+    <form id="contact-form" novalidate>
+      <div class="form-group">
+        <input type="text" id="name" required aria-required="true" />
+        <label for="name">Your Name</label>
+        <span class="validation-message"></span>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" required aria-required="true" />
+        <label for="email">Your Email</label>
+        <span class="validation-message"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="message" rows="5" required aria-required="true"></textarea>
+        <label for="message">Your Message</label>
+        <span class="validation-message"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
   </section>
 
+  <section class="section map-section glass" id="location" tabindex="-1" aria-label="Office location map">
+    <h2>Our London Office</h2>
+    <p>3rd Floor, 10 Brook Street, London, England, W1S 1BG</p>
+    <div class="map-embed-container">
+      <iframe
+        title="Breeza Sea Carriers Office Map"
+        src="https://www.google.com/maps?q=3rd+Floor,+10+Brook+Street,+London,+England,+W1S+1BG&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Map of 3rd Floor, 10 Brook Street, London"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2007 Breeza Sea Carriers Shipping (UK) Limited. All Rights Reserved.</p>
+    <div class="footer-content">
+      <span>© 2007 Breeza Sea Carriers Shipping (UK) Ltd.</span>
+      <div class="socmed" role="navigation" aria-label="Social media links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
   </footer>
-
-  <script>
-    let slides = document.querySelectorAll('.hero-slide');
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000); // changes every 4 seconds
-  </script>
+  <div id="thankyou-modal" role="dialog" aria-modal="true" aria-labelledby="thankyou-title" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="thankyou-title">Thank You!</h3>
+      <p>Your message has been sent successfully. We will get back to you shortly.</p>
+      <button id="close-modal" aria-label="Close thank you message">Close</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
