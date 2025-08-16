@@ -741,3 +741,70 @@ textarea:focus-visible {
   text-decoration: underline;
 }
 
+/* 3D Card Hover Effect */
+.service-card, .feature {
+  perspective: 800px;
+  transition: transform 0.3s cubic-bezier(.17,.67,.83,.67), box-shadow 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+.service-card:hover, .service-card:focus-visible, .feature:hover, .feature:focus-visible {
+  transform: translateY(-12px) scale(1.03) rotate3d(1,1,0,8deg);
+  box-shadow: 0 20px 44px rgba(0, 86, 179, 0.33), 0 1.5px 5px rgba(0,0,0,0.04);
+}
+
+/* Buttons: bouncy tap */
+.btn-primary:active {
+  animation: btnBounce 0.28s cubic-bezier(.5,1.4,.32,1) alternate;
+}
+@keyframes btnBounce {
+  0% { transform: scale(1);}
+  50% { transform: scale(0.96);}
+  100% { transform: scale(1.03);}
+}
+
+/* Animated underline on nav - already present, but make it 'slide' */
+nav a::after {
+  transition: width 0.35s cubic-bezier(.53,.37,.41,.85);
+}
+
+/* Animated Section Headings */
+.section h2 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; bottom: -8px;
+  height: 6px;
+  width: 35%;
+  background: linear-gradient(90deg, #0056b3, #d32f2f);
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: headingLineIn 1.1s cubic-bezier(.17,.67,.83,.67) 0.2s forwards;
+}
+@keyframes headingLineIn {
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Parallax hero image (on scroll) */
+.hero {
+  will-change: background-position;
+  transition: background-position 0.3s linear;
+}
+
+/* Testimonials animate in/out fade/slide */
+.testimonial {
+  opacity: 0;
+  transform: translateX(55px) scale(.95);
+  transition: opacity 0.7s, transform 0.7s;
+}
+.testimonial.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  z-index: 1;
+}

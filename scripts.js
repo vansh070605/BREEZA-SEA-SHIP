@@ -87,3 +87,11 @@ modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) modal.classList.add('hidden');
 });
+
+// Hero Parallax Background
+window.addEventListener('scroll', function() {
+  const hero = document.querySelector('.hero');
+  if (window.scrollY < window.innerHeight) {
+    hero.style.backgroundPosition = `center ${window.scrollY * 0.4}px`;
+  }
+});
