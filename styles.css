@@ -219,6 +219,20 @@ header.scrolled nav a:focus-visible {
   background: rgba(255,255,255,0.1);
 }
 
+.navbar-logo {
+  height: 44px;
+  width: auto;
+  margin-right: 1px;
+  vertical-align: middle;
+  border-radius: 11px;
+  box-shadow: 0 2px 9px rgba(0,86,179,0.09);
+  background: transparent;
+}
+@media (max-width: 600px) {
+  .navbar-logo { height: 34px; margin-right: 9px;}
+}
+
+
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -1445,4 +1459,8 @@ textarea:focus-visible,
     box-shadow: none;
     border: 1px solid #ccc;
   }
+}
+
+.hero, .hero-content, .service-card, .feature, .carousel-controls button {
+  will-change: transform, opacity;
 }
