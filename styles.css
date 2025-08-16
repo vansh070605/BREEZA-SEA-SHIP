@@ -912,7 +912,7 @@ textarea:not(:placeholder-shown) + label {
 /* Enhanced Contact Details */
 .contact-details {
   text-align: left;
-  max-width: 500px;
+  max-width: 510px;
   margin: 0 auto 3rem auto;
   background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
   border-radius: 16px;

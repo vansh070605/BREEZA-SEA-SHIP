@@ -1,8 +1,8 @@
-// Initialize AOS (Animate on Scroll)
+// Initialize AOS
 AOS.init({
-  duration: 1200,
+  duration: 1000,
   once: true,
-  easing: 'ease-in-out-cubic',
+  easing: 'ease-in-out',
 });
 
 const hamburger = document.querySelector('.hamburger');
@@ -25,6 +25,7 @@ const testimonials = document.querySelectorAll('.testimonial');
 const prevBtn = document.querySelector('.carousel-controls .prev');
 const nextBtn = document.querySelector('.carousel-controls .next');
 let testimonialIndex = 0;
+
 function showTestimonial(index) {
   testimonials.forEach((t, i) => t.classList.toggle('active', i === index));
 }
@@ -43,6 +44,7 @@ setInterval(() => {
 
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
+
 function validateField(field) {
   const value = field.value.trim();
   const type = field.type;
@@ -64,9 +66,11 @@ function validateField(field) {
   field.removeAttribute('aria-invalid');
   return true;
 }
+
 inputs.forEach(input => {
   input.addEventListener('input', () => validateField(input));
 });
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   let allValid = true;
@@ -81,6 +85,7 @@ form.addEventListener('submit', e => {
   });
   document.getElementById('close-modal').focus();
 });
+
 const modal = document.getElementById('thankyou-modal');
 document.getElementById('close-modal').addEventListener('click', () => modal.classList.add('hidden'));
 modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
